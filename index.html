@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Exemplo didático de uso de tags HTML5 como listas, inputs, mídia e iframes.">
+  <meta name="author" content="Mykael Menezes">
+   <title>Tags em HTML</title>
+</head>
+<body>
+   <h1>Como funcinam as Tags em HTML </h1>
+   <hr />
+   <h2 id="inicio">Índice</h2>
+      <ul>
+         <li><a href="#estrutura">Como é uma estrutura básica de um HTML?</a></li>
+         <li><a href="#listas">Diferenças entre <i>Listas</i></a></li>
+         <li><a href="#crs">Diferenças entre <i>Checkbox, Radio e Select</i></a></li>
+         <li><a href="#midias">Formatos de mídia aceitos no HTML5</a></li>
+         <li><a href="#links">Links de referências</a></li>
+      </ul>
+   <!-- Estrutura básica -->
+   <h2 id="estrutura">Como é a estrutura básica de um HTML?</h2>
+   <hr>
+      <p>Um documento HTML é formado por várias tags, que dizem ao navegador o que mostrar e como organizar cada parte da página.</p>
+      <P>
+      <pre>
+      <strong>&lt;html&gt;</strong> <i> Início do documento HTML. Todo o conteúdo da página deve estar dentro dessa tag.</i>
+      
+      <strong>&lt;head&gt;</strong> 
+      <i>Cabeçalho da página. Contém informações invisíveis ao usuário, como título, codificação de caracteres e links para estilos (CSS).</i>
+      <strong>&lt;/head&gt;</strong>
+
+      <strong>&lt;body&gt;</strong> 
+      <i>Corpo da página. Tudo que o usuário vê está aqui: textos, imagens, botões, formulários, vídeos etc.
+      <strong>&lt;/body&gt;</strong>
+
+      <strong>&lt;/html&gt;</strong> <i>Fim do documento HTML. Fecha a estrutura iniciada com a tag &lt;html&gt;.</i>
+      </pre>
+      </P>
+   <small><a href="#inicio">(voltar)</a></small>
+   <!-- Listas -->
+   <h2 id="listas">Diferenças entre <i>Listas</i></h2>
+   <hr>
+     <p>
+    A tag <strong><code>&lt;ol&gt;</code></strong> define uma lista ordenada. 
+    Uma lista ordenada pode ser numérica ou alfabética. <br>
+    A tag <strong><code>&lt;li&gt;</code></strong> é usada para definir cada item da lista.
+  </p>
+
+  <h4>Exemplo:</h4>
+  <h5>Código</h5>
+  <pre>&lt;ol&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ol&gt;</pre>  
+  <h5>Retorno da página HTML</h5>
+  <ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <p>
+    A tag <strong><code>&lt;ul&gt;</code></strong> define uma lista não ordenada (com marcadores).
+  </p>
+
+  <h4>Exemplo:</h4>
+  <h5>Código</h5>
+  <pre>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</pre>  
+
+  <h5>Retorno da página HTML</h5>
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+   <small><a href="#inicio">(voltar)</a></small>
+   
+     
+   <h2 id="crs">Diferenças entre <i>Checkbox, Radio e Select</i></h2>
+   <hr>
+  
+    <p>
+      <strong>Checkbox</strong>: permite selecionar <strong>uma ou mais opções</strong> ao mesmo tempo. <br>
+      <strong>Radio</strong>: permite escolher <strong>apenas uma opção</strong> entre várias (opções exclusivas).<br>
+      <strong>Select</strong>: exibe uma <strong>lista suspensa</strong> com várias opções, normalmente para escolha única.
+    </p>
+  
+
+  <h3>Exemplos:</h3>
+
+  <p><strong>Checkbox (múltipla escolha):</strong></p>
+  <input type="checkbox" name="opcional[]" value="checkbox"> Checkbox <br>
+
+  <p><strong>Radio (escolha única):</strong></p>
+  <input type="radio" name="borda" value="sim"> Sim <br>
+  <input type="radio" name="borda" value="nao"> Não <br>
+
+  <p><strong>Select (lista suspensa):</strong></p>
+  <select name="role">
+    <option value="selecione">Selecione</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+  </select>
+   
+   <small><a href="#inicio">(voltar)</a></small>
+
+   <h2>Formatos de mídia aceitos no HTML5</h2>
+<hr>
+    <h3>As tags utilizadas são:</h3>
+
+    <ul>
+      <li>
+        <code>&lt;img&gt;</code> – Para exibir imagens.<br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Exemplo.jpg" alt="Exemplo de imagem" width="300">
+      </li>
+
+      <li>
+        <code>&lt;video&gt;</code> – Para incorporar vídeos com controles.<br>
+        <video width="320" height="240" controls title="Vídeo com legenda">
+          <source src="https://cdn.pixabay.com/video/2025/04/28/275429_tiny.mp4" type="video/mp4">
+          <track 
+            src="legenda.vtt" 
+            kind="subtitles" 
+            srclang="pt" 
+            label="Português" 
+            default>
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </li>
+
+      <li>
+        <code>&lt;track&gt;</code> – Para legendas e faixas de texto em vídeos.
+      </li>
+
+      <li>
+        <code>&lt;iframe&gt;</code> – Para incorporar outros conteúdos (como vídeos do YouTube ou sites).<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DqC8R2p0lls?si=yUCNwOw03VesD8fQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </li>
+    </ul>
+   <small><a href="#inicio">(voltar)</a></small>
+
+<h2>Links de referências</h2>
+    <ul>
+        <li><a href="https://web.dio.me/">http://dio.me</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com/</a></li>
+        <li><a href="https://www.devmedia.com.br/html-basico-codigos-html/16596">http://devmedia.com.br</a></li>
+    </ul>
+<footer>
+  <p><strong><a href="#inicio">(Inicio)</a></strong></p>
+</footer>
+</body>
+</html>
